@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "strict": true,
+    "strictPropertyInitialization": true,
+    "sourceMap": true,
+    "rootDir": "src",
+    "target": "ES2020",
+    "downlevelIteration": true,
+    "lib": ["ES2020"],
+    "outDir": "dist/",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "module": "ES2015",
+    "removeComments": true
+  },
+  "include": [
+    "src/"
+  ]
+}

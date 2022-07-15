@@ -1,0 +1,74 @@
+@mixin a-href {
+  color: var(--main-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: calc(var(--font-size) * 0.10);
+  padding: calc(var(--font-size) * 0.25);
+  border-radius: calc(var(--font-size) * 0.6);
+}
+
+.app-navigation {
+  background-color: var(--third-color);
+  display: flex;
+  justify-content: center;
+  .menu {
+    width: 80%;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      li {
+        .menu-button {
+          display: block;
+          @include a-href;
+        }
+        .menu-button:hover {
+          color: var(--third-color);
+          background-color: var(--main-color);
+        }
+      }
+    }
+  }
+  .logout {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    .logout-button {
+      @include a-href;
+      color: var(--base-color);
+      background-color: var(--main-color);
+    }
+    .logout-button:hover {
+      @include a-href;
+      color: var(--first-color);
+      background-color: var(--base-background-color);
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  li {
+    .menu-button {
+      font-size: calc(var(--font-size) * 0.8);
+    }
+  }
+  .logout {
+    .logout-button {
+      font-size: calc(var(--font-size) * 0.8);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  li {
+    .menu-button {
+      font-size: calc(var(--font-size) * 0.5);
+    }
+  }
+  .logout {
+    .logout-button {
+      font-size: calc(var(--font-size) * 0.45);
+    }
+  }
+}

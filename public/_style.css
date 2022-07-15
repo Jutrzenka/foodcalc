@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+:root {
+  --font-size: calc(20px + ((20vh + 20vw)/20));
+  --base-background-color: #efece5;
+  --base-color: #0D0D0D;
+  --main-color: #D9BB96;
+  --first-color: #59321B;
+  --second-color: #8C5C20;
+  --third-color: #403634;
+}
+
+nav.navigation {
+  height: 15%;
+  min-width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--third-color);
+  border-bottom: double 1px var(--base-color);
+}
+nav.navigation aside.navigation.logo {
+  aspect-ratio: 1;
+}
+nav.navigation aside.navigation.logo img.navigation.logo-img {
+  height: 100%;
+  padding: 5%;
+}
+nav.navigation main.navigation.main-section {
+  height: 15vh;
+  width: 100%;
+}
+nav.navigation main.navigation.main-section ul.navigation {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav.navigation main.navigation.main-section ul.navigation li.navigation {
+  list-style: none;
+}
+nav.navigation main.navigation.main-section ul.navigation li.navigation a {
+  padding: 2.5vh;
+  color: var(--main-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.75vw;
+}
+
+@media (max-width: 480px) {
+  aside.navigation.logo {
+    width: 0;
+  }
+  aside.navigation.logo img.navigation.logo-img {
+    display: none;
+  }
+  li.navigation a {
+    font-size: calc(var(--font-size) * 0.85);
+  }
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.data .submit-button {
+  border: 1px solid;
+  width: 50%;
+  height: 10vh;
+  background-color: var(--first-color);
+  color: var(--main-color);
+  border-radius: calc(2.5vh + 2.5vw);
+  margin: 2.5vh 0;
+  font-size: var(--font-size);
+  font-weight: bold;
+  letter-spacing: 0.1vw;
+}
+
+.signup_link {
+  display: flex;
+  justify-content: center;
+  padding: 2.5vh 2.5vw;
+}
+.signup_link p {
+  font-size: calc(var(--font-size) / 2);
+}
+.signup_link a {
+  font-size: calc(var(--font-size) / 1.85);
+  font-weight: bold;
+  color: var(--first-color);
+  margin-left: 2vw;
+}
+
+@media (min-width: 480px) {
+  main.login-form {
+    width: 100%;
+    height: 85%;
+    padding: 5vh 5vw;
+    overflow: scroll;
+  }
+  main.login-form .center {
+    background-color: white;
+    border-radius: calc(var(--font-size) * 2);
+  }
+  main.login-form .center h1 {
+    text-align: center;
+    padding: 2.25vh 0;
+    border-bottom: 0.2vh solid silver;
+    color: var(--first-color);
+  }
+  main.login-form .center form {
+    padding: 0 0.2vh;
+  }
+  main.login-form .center form .txt_field {
+    position: relative;
+    border-bottom: 0.1vh solid #adadad;
+    margin: 0.3vh 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.2vw 0.4vh;
+  }
+  main.login-form .center form .txt_field label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 0.2vw;
+  }
+  main.login-form .center form .txt_field label input {
+    width: 95%;
+    padding: 0 5vw;
+    margin: 1vh 1vw 0 1vw;
+    height: 6vh;
+    font-size: var(--font-size);
+    border: none;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  main.login-form {
+    width: 100%;
+    min-height: 83%;
+    overflow: scroll;
+    margin-top: 2vh;
+  }
+  main.login-form .center {
+    min-height: 83vh;
+    background-color: white;
+    border-radius: var(--font-size) var(--font-size) 0 0;
+  }
+  main.login-form .center h1 {
+    display: none;
+  }
+  main.login-form .center form .txt_field {
+    position: relative;
+    border-bottom: 0.05vh solid #adadad;
+    margin: 0.2vh 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.2vw 0.4vh;
+  }
+  main.login-form .center form .txt_field label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 0.1vw;
+  }
+  main.login-form .center form .txt_field label input {
+    width: 95%;
+    padding: 0 5vw;
+    margin: 1vh 1vw 0 1vw;
+    height: 6vh;
+    font-size: calc(var(--font-size) * 0.85);
+    border: none;
+    text-align: center;
+  }
+  .data .submit-button {
+    min-height: 6vh;
+    border-radius: calc(2vh + 2vw);
+    margin: 4vh 4vw;
+    font-size: calc(var(--font-size) * 0.8);
+    font-weight: bold;
+    letter-spacing: 0.08vw;
+  }
+}
+.app-navigation {
+  background-color: var(--third-color);
+  display: flex;
+  justify-content: center;
+}
+.app-navigation .menu {
+  width: 80%;
+}
+.app-navigation .menu ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.app-navigation .menu ul li .menu-button {
+  display: block;
+  color: var(--main-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: calc(var(--font-size) * 0.1);
+  padding: calc(var(--font-size) * 0.25);
+  border-radius: calc(var(--font-size) * 0.6);
+}
+.app-navigation .menu ul li .menu-button:hover {
+  color: var(--third-color);
+  background-color: var(--main-color);
+}
+.app-navigation .logout {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+.app-navigation .logout .logout-button {
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: calc(var(--font-size) * 0.1);
+  padding: calc(var(--font-size) * 0.25);
+  border-radius: calc(var(--font-size) * 0.6);
+  background-color: var(--main-color);
+}
+.app-navigation .logout .logout-button:hover {
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: calc(var(--font-size) * 0.1);
+  padding: calc(var(--font-size) * 0.25);
+  border-radius: calc(var(--font-size) * 0.6);
+  background-color: var(--base-background-color);
+}
+
+@media (max-width: 890px) {
+  li .menu-button {
+    font-size: calc(var(--font-size) * 0.8);
+  }
+  .logout .logout-button {
+    font-size: calc(var(--font-size) * 0.8);
+  }
+}
+@media (max-width: 480px) {
+  li .menu-button {
+    font-size: calc(var(--font-size) * 0.5);
+  }
+  .logout .logout-button {
+    font-size: calc(var(--font-size) * 0.45);
+  }
+}
+.recipes-list {
+  height: max-content;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vh 1vw;
+  margin-top: 2vh;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+}
+.recipes-list .one-recipe {
+  background-color: var(--base-background-color);
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+}
+.recipes-list .one-recipe .element, .recipes-list .one-recipe .delete {
+  font-weight: normal;
+  font-size: calc(var(--font-size) * 0.5);
+  text-align: center;
+  display: block;
+}
+.recipes-list .one-recipe .element {
+  width: 75%;
+  color: var(--base-color);
+  text-decoration: none;
+}
+.recipes-list .one-recipe .element:hover {
+  color: green;
+}
+
+.form-button {
+  width: 100%;
+  height: auto;
+}
+.form-button .delete {
+  width: 100%;
+  background-color: var(--third-color);
+  color: var(--base-background-color);
+  text-decoration: none;
+}
+.form-button .delete:hover {
+  background-color: var(--base-background-color);
+  color: var(--third-color);
+}
+
+.state {
+  display: flex;
+  justify-content: center;
+}
+.state .statement {
+  height: max-content;
+  width: max-content;
+  margin-top: 20vh;
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: calc(var(--font-size) * 2);
+}
+.state .statement h1 {
+  display: block;
+  font-size: calc(var(--font-size) / 1.25);
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+.state .statement p {
+  display: block;
+  font-size: calc(var(--font-size) / 1.75);
+  margin-bottom: 5vh;
+}
+.state .statement a {
+  display: block;
+  text-transform: uppercase;
+  color: var(--base-color);
+  font-size: calc(var(--font-size) / 1.5);
+}
+.state .error h1 {
+  color: red;
+}
+.state .failed h1 {
+  color: darkred;
+}
+.state .success h1 {
+  color: darkolivegreen;
+}
+
+.wrapper-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh 0;
+}
+.wrapper-product .product {
+  width: max-content;
+  min-width: 50vw;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 2vw;
+  border-radius: calc(var(--font-size) * 0.8);
+  background-color: var(--base-background-color);
+}
+.wrapper-product .product h1 {
+  color: var(--third-color);
+  font-size: calc(var(--font-size) * 0.6);
+  letter-spacing: 2px;
+}
+.wrapper-product .product h2 {
+  color: var(--third-color);
+  font-size: calc(var(--font-size) * 0.4);
+  letter-spacing: 1px;
+  margin-top: 0.8vh;
+}
+.wrapper-product .product .label_field {
+  color: var(--third-color);
+  font-size: calc(var(--font-size) * 0.4);
+  letter-spacing: 1px;
+}
+.wrapper-product .product .submit-button {
+  width: 60%;
+  color: var(--base-background-color);
+  background-color: var(--third-color);
+  border: none;
+  border-radius: calc(var(--font-size) * 0.8);
+  padding: 1vh;
+  margin-top: 0.8vh;
+  text-decoration: none;
+}
+.wrapper-product .product .submit-button:hover {
+  color: var(--base-background-color);
+  background-color: var(--second-color);
+}
+
+.wrapper-recipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh 0;
+}
+.wrapper-recipe .recipe {
+  min-width: 50vw;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 2vw;
+  border-radius: calc(var(--font-size) * 0.8);
+  background-color: var(--base-background-color);
+}
+.wrapper-recipe .recipe .delete-product {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-recipe .recipe h1, .wrapper-recipe .recipe .title {
+  color: var(--third-color);
+  font-size: calc(var(--font-size) * 0.6);
+  letter-spacing: 2px;
+}
+.wrapper-recipe .recipe h2 {
+  color: var(--third-color);
+  font-size: calc(var(--font-size) * 0.4);
+  letter-spacing: 1px;
+  margin-top: 0.8vh;
+}
+.wrapper-recipe .recipe h3 {
+  color: var(--third-color);
+  font-size: calc(var(--font-size) * 0.3);
+  letter-spacing: 1px;
+  margin-top: 0.8vh;
+}
+.wrapper-recipe .recipe .label_field {
+  width: 100%;
+  color: var(--third-color);
+  font-size: calc(var(--font-size) * 0.4);
+  letter-spacing: 1px;
+}
+
+.submit-button {
+  width: 60%;
+  color: var(--base-background-color);
+  background-color: var(--third-color);
+  border: none;
+  border-radius: calc(var(--font-size) * 0.8);
+  padding: 1vh;
+  margin-top: 0.8vh;
+  text-decoration: none;
+}
+
+.submit-button:hover {
+  color: var(--base-background-color);
+  background-color: var(--second-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: var(--font-size);
+  color: var(--base-color);
+  background-color: var(--main-color);
+  min-width: fit-content;
+  min-height: fit-content;
+}
+
+.wrapper-body {
+  min-width: 240px;
+  min-height: 240px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.app-wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=_style.css.map */

@@ -1,0 +1,36 @@
+{{>app-navigation}}
+<main class="wrapper-product">
+    <div class="product">
+        <h1>{{product.name}}</h1>
+        <h2>Kilokalorie: {{product.energy}}kcal/100g</h2>
+        <h2>Tłuszcz: {{product.fat}}g/100g</h2>
+        <h2>Węglowodany: {{product.carbohydrates}}g/100g</h2>
+        <h2>Białko: {{product.protein}}g/100g</h2>
+    </div>
+</main>
+<main class="wrapper-product">
+    <form class="product" action="/app/products/{{idProduct}}?_method=PATCH" method="POST">
+        <h2>Edycja:</h2>
+        <div class="txt_field">
+            <label class="label_field" for="name">Nazwa produktu:
+                <input type="text" name="name" value="{{product.name}}" required></label>
+        </div>
+        <div class="number_field">
+            <label class="label_field" for="energy">Kalorie:
+                <input type="number" maxlength="8" min="0" max="99999999"  name="energy" value="{{product.energy}}">kcal/100g</label>
+        </div>
+        <div class="number_field">
+            <label class="label_field" for="fat">Tłuszcz:
+                <input type="number" maxlength="3" min="0" max="100" name="fat" value="{{product.fat}}">g/100g</label>
+        </div>
+        <div class="number_field">
+            <label class="label_field" for="carbohydrates">Węglowodany:
+                <input type="number" maxlength="3" min="0" max="100" name="carbohydrates" value="{{product.carbohydrates}}">g/100g</label>
+        </div>
+        <div class="number_field">
+            <label class="label_field" for="protein">Białko:
+                <input type="number" maxlength="3" min="0" max="100" name="protein" value="{{product.protein}}">g/100g</label>
+        </div>
+        <input class="submit-button" type="submit" value="Edytuj">
+    </form>
+</main>

@@ -1,0 +1,11 @@
+<ul class="recipes-list">
+    <li class="one-recipe">
+        {{>button-action address="/app/recipes/" text="Stwórz przepis" method="put"}}
+    </li>
+    {{#each recipes}}
+        <li class="one-recipe">
+            <a href="/app/recipes/{{this.id}}" class="element">{{this.name}}</a>
+            {{>button-action address="/app/recipes/" text="Usuń" method="delete"}}
+        </li>
+    {{/each}}
+</ul>

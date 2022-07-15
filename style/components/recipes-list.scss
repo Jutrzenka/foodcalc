@@ -1,0 +1,30 @@
+.recipes-list {
+  height: max-content;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vh 1vw;
+  margin-top: 2vh;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  .one-recipe {
+    background-color: var(--base-background-color);
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    .element, .delete {
+      font-weight: normal;
+      font-size: calc(var(--font-size) * 0.5);
+      text-align: center;
+      display: block;
+    }
+    .element {
+      width: 75%;
+      color: var(--base-color);
+      text-decoration: none;
+    }
+    .element:hover {
+      color: green;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use "variable";
+@use "components/AA_components.export";
+@use "views/AA_views.export";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: var(--font-size);
+    color: var(--base-color);
+    background-color: var(--main-color);
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
+.wrapper-body {
+    min-width: 240px;
+    min-height: 240px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.app-wrapper {
+    min-width: 100vw;
+    min-height: 100vh;
+}

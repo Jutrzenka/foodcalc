@@ -1,0 +1,14 @@
+.form-button {
+  width: 100%;
+  height: auto;
+  .delete {
+    width: 100%;
+    background-color: var(--third-color);
+    color: var(--base-background-color);
+    text-decoration: none;
+  }
+  .delete:hover {
+    background-color: var(--base-background-color);
+    color: var(--third-color);
+  }
+}

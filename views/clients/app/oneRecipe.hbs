@@ -1,0 +1,62 @@
+{{>app-navigation}}
+<main class="wrapper-recipe">
+    <div class="recipe">
+        <h1>{{recipe.name}}</h1>
+        {{#if recipe.description}}
+            <h2>Opis: {{recipe.description}}</h2>
+        {{/if}}
+    </div>
+</main>
+
+<main class="wrapper-recipe">
+    <div class="recipe">
+        <h2 class="title">Lista produktów:</h2>
+        {{#each selectProducts}}
+            <h2>Nazwa: {{this.name}} - Ilość: {{this.amount}}g</h2>
+            <h3>Kaloryczność: {{this.energy}}kcal/100g</h3>
+            <h3>Węglowodany: {{this.carbohydrates}}g/100g</h3>
+            <h3>Tłuszcze: {{this.fat}}g/100g</h3>
+            <h3>Białko: {{this.protein}}g/100g</h3>
+        {{/each}}
+    </div>
+</main>
+
+<main class="wrapper-recipe">
+    <form id="recipe" class="recipe" action="/app/recipes/{{idRecipe}}?_method=PATCH" method="POST">
+        <h2 class="title">Edycja przepisu:</h2>
+        <div class="txt_field">
+            <label class="label_field" for="name">Nazwa przepisu:
+                <input type="text" name="name" value="{{recipe.name}}" required></label>
+        </div>
+        <div class="long_txt_field">
+            <label class="label_field" for="description">Opis przepisu:
+            <textarea class="label_field" name="description" form="recipe" placeholder="{{recipe.description}}">{{recipe.description}}</textarea></label>
+        </div>
+        <input class="submit-button" type="submit" value="Edytuj">
+    </form>
+</main>
+
+<main class="wrapper-recipe">
+    <div class="recipe">
+        <h2 class="title">Edycja listy produktów:</h2>
+        {{#each selectProducts}}
+            <h3>{{this.name}} - {{this.amount}}g</h3>
+            <form id="delete-product" class="delete-product" action="/app/recipes/products/{{this.id}}?_method=DELETE" method="POST">
+                <input class="submit-button" type="submit" value="Usuń {{this.name}}">
+            </form>
+        {{/each}}
+        <form id="new-product" class="new-product" action="/app/recipes/{{recipe.id}}/products?_method=PUT" method="POST">
+            <label class="label_field" for="productId">Dodaj produkt:
+            <select name="productId" id="productId" required>
+                {{#each products}}
+                    <option value="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+            </select></label>
+            <div class="number_field">
+                <label class="label_field" for="amount">Ilość
+                    <input type="number" name="amount" required>g</label>
+            </div>
+            <input class="submit-button" type="submit" value="Dodaj produkt">
+        </form>
+    </div>
+</main>

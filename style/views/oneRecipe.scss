@@ -1,0 +1,62 @@
+.wrapper-recipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh 0;
+  .recipe {
+    min-width: 50vw;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 2vw;
+    border-radius: calc(var(--font-size) * 0.8);
+    background-color: var(--base-background-color);
+    .delete-product {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h1, .title  {
+      color: var(--third-color);
+      font-size: calc(var(--font-size) * 0.6);
+      letter-spacing: 2px;
+    }
+    h2 {
+      color: var(--third-color);
+      font-size: calc(var(--font-size) * 0.4);
+      letter-spacing: 1px;
+      margin-top: 0.8vh;
+    }
+    h3 {
+      color: var(--third-color);
+      font-size: calc(var(--font-size) * 0.3);
+      letter-spacing: 1px;
+      margin-top: 0.8vh;
+    }
+    .label_field {
+      width: 100%;
+      color: var(--third-color);
+      font-size: calc(var(--font-size) * 0.4);
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.submit-button {
+  width: 60%;
+  color: var(--base-background-color);
+  background-color: var(--third-color);
+  border: none;
+  border-radius: calc(var(--font-size) * 0.8);
+  padding: 1vh;
+  margin-top: 0.8vh;
+  text-decoration: none;
+}
+.submit-button:hover {
+  color: var(--base-background-color);
+  background-color: var(--second-color);
+}

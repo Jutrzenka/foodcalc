@@ -1,0 +1,133 @@
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .submit-button {
+    border: 1px solid;
+    width: 50%;
+    height: 10vh;
+    background-color: var(--first-color);
+    color: var(--main-color);
+    border-radius: calc(2.5vh + 2.5vw);
+    margin: 2.5vh 0;
+    font-size: var(--font-size);
+    font-weight: bold;
+    letter-spacing: 0.10vw;
+  }
+}
+.signup_link {
+  display: flex;
+  justify-content: center;
+  padding: 2.5vh 2.5vw;
+  p {
+    font-size: calc(var(--font-size)/2);
+  }
+  a {
+    font-size: calc(var(--font-size)/1.85);
+    font-weight: bold;
+    color: var(--first-color);
+    margin-left: 2vw;
+  }
+}
+@media (min-width: 480px) {
+  main.login-form {
+    width: 100%;
+    height: 85%;
+    padding: 5vh 5vw;
+    overflow: scroll;
+
+    .center {
+      background-color: white;
+      border-radius: calc(var(--font-size)*2);
+
+      h1 {
+        text-align: center;
+        padding: 2.25vh 0;
+        border-bottom: 0.2vh solid silver;
+        color: var(--first-color);
+      }
+
+      form {
+        padding: 0 0.2vh;
+
+        .txt_field {
+          position: relative;
+          border-bottom: 0.1vh solid #adadad;
+          margin: 0.3vh 0;
+          display: flex;
+          justify-content: space-around;
+          padding: 0.2vw 0.4vh;
+          label {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            letter-spacing: 0.2vw;
+            input {
+              width: 95%;
+              padding: 0 5vw;
+              margin: 1vh 1vw 0 1vw;
+              height: 6vh;
+              font-size: var(--font-size);
+              border: none;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  main.login-form {
+    width: 100%;
+    min-height: 83%;
+    overflow: scroll;
+    margin-top: 2vh;
+    .center {
+      min-height: 83vh;
+      background-color: white;
+      border-radius: var(--font-size) var(--font-size) 0 0;
+      h1 {
+        display: none;
+      }
+      form {
+        .txt_field {
+          position: relative;
+          border-bottom: 0.05vh solid #adadad;
+          margin: 0.2vh 0;
+          display: flex;
+          justify-content: space-around;
+          padding: 0.2vw 0.4vh;
+          label {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            letter-spacing: 0.1vw;
+            input {
+              width: 95%;
+              padding: 0 5vw;
+              margin: 1vh 1vw 0 1vw;
+              height: 6vh;
+              font-size: calc(var(--font-size) * 0.85);
+              border: none;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .data {
+    .submit-button {
+      min-height: 6vh;
+      border-radius: calc(2vh + 2vw);
+      margin: 4vh 4vw;
+      font-size: calc(var(--font-size) * 0.8);
+      font-weight: bold;
+      letter-spacing: 0.08vw;
+    }
+  }
+}
