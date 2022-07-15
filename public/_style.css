@@ -215,19 +215,23 @@ nav.navigation main.navigation.main-section ul.navigation li.navigation a {
   justify-content: center;
 }
 .app-navigation .logout .logout-button {
+  color: var(--main-color);
   text-transform: uppercase;
   text-decoration: none;
   margin: calc(var(--font-size) * 0.1);
   padding: calc(var(--font-size) * 0.25);
   border-radius: calc(var(--font-size) * 0.6);
+  color: var(--base-color);
   background-color: var(--main-color);
 }
 .app-navigation .logout .logout-button:hover {
+  color: var(--main-color);
   text-transform: uppercase;
   text-decoration: none;
   margin: calc(var(--font-size) * 0.1);
   padding: calc(var(--font-size) * 0.25);
   border-radius: calc(var(--font-size) * 0.6);
+  color: var(--first-color);
   background-color: var(--base-background-color);
 }
 
